@@ -1,1 +1,11 @@
-<p>gallery works!</p>
+<div class="gallery">
+    <div *ngFor="let artwork of artworks" class="gallery-item">
+      <a [routerLink]="['/artwork', artwork.name]">
+        <img [src]="artwork.images.thumbnail" [alt]="artwork.name" />
+        <div class="overlay">
+          <h2>{{ artwork.name }}</h2>
+          <p>{{ artwork.artist.name }}</p>
+        </div>
+      </a>
+    </div>
+  </div>

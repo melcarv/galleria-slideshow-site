@@ -1,1 +1,6 @@
-<p>image-modal works!</p>
+<div class="modal-overlay" *ngIf="isOpen" (click)="close()">
+    <div class="modal-content">
+      <img [src]="imageUrl" alt="Artwork">
+      <button (click)="close()">Fechar</button>
+    </div>
+  </div>
