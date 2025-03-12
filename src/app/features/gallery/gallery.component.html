@@ -1,11 +1,24 @@
-<div class="gallery">
+<div class="gallery-container">
+  <header class="gallery-header">
+    <img src="assets/shared/logo.svg" alt="Galleria logo" class="logo" />
+    <a href="" class="slideshow-button">Start slideshow</a>
+  </header>
+  <hr class="gallery-hr" />
+  <div class="gallery">
     <div *ngFor="let artwork of artworks" class="gallery-item">
-      <a [routerLink]="['/artwork', artwork.name]">
-        <img [src]="artwork.images.thumbnail" [alt]="artwork.name" />
-        <div class="overlay">
-          <h2>{{ artwork.name }}</h2>
-          <p>{{ artwork.artist.name }}</p>
+      <a [routerLink]="['/artwork', artwork.name]" class="gallery-link">
+        <div class="gallery-image-wrapper">
+          <img
+            [src]="artwork.images.thumbnail"
+            [alt]="artwork.name"
+            class="gallery-image"
+          />
+          <div class="gallery-overlay">
+            <h2 class="gallery-title">{{ artwork.name }}</h2>
+            <p class="gallery-artist">{{ artwork.artist.name }}</p>
+          </div>
         </div>
       </a>
     </div>
   </div>
+</div>
