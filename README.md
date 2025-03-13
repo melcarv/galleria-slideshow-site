@@ -1,59 +1,59 @@
-# GalleriaSlideshowSite
+Este projeto é uma galeria de arte interativa desenvolvida com Angular 19. Ele exibe uma coleção de obras de arte com informações detalhadas sobre cada uma, permitindo a navegação entre elas e a visualização ampliada das imagens.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+🚀 Funcionalidades
 
-## Development server
+📌 Exibição de uma galeria de artes em layout responsivo.
 
-To start a local development server, run:
+🔍 Página de detalhes para cada obra.
 
-```bash
-ng serve
-```
+🔄 Navegação entre obras diretamente da página de detalhes.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🖼️ Modal para exibição ampliada da imagem principal.
 
-## Code scaffolding
+📡 Consumo de dados via JSON, podendo ser facilmente integrado a uma API.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+🏗️ Estrutura do Projeto
 
-```bash
-ng generate component component-name
-```
+galleria/
+│── src/
+│   ├── app/
+│   │   ├── core/                # Serviços e modelos globais
+│   │   │   ├── services/
+│   │   │   │   ├── artwork.service.ts  # Serviço para carregar os dados do JSON
+│   │   │   ├── models/
+│   │   │   │   ├── artwork.model.ts    # Interface para os dados das obras
+│   │   ├── features/            # Componentes principais do app
+│   │   │   ├── gallery/          # Página de galeria
+│   │   │   │   ├── gallery.component.ts
+│   │   │   │   ├── gallery.component.html
+│   │   │   │   ├── gallery.component.scss
+│   │   │   ├── artwork/          # Página de detalhes da obra
+│   │   │   │   ├── artwork.component.ts
+│   │   │   │   ├── artwork.component.html
+│   │   │   │   ├── artwork.component.scss
+│   │   │   ├── shared/           # Componentes reutilizáveis
+│   │   │   │   ├── image-modal/  # Modal para exibir imagens ampliadas
+│   │   │   │   │   ├── image-modal.component.ts
+│   │   │   │   │   ├── image-modal.component.html
+│   │   │   │   │   ├── image-modal.component.scss
+│   │   ├── app.config.ts         # Configuração do app (standalone)
+│   │   ├── app.routes.ts         # Definição das rotas
+│   ├── assets/                   # Imagens e JSON de dados
+│   │   ├── data.json             # Dados das obras de arte
+│   ├── styles.scss               # Estilos globais
+│   ├── main.ts                   # Bootstrap do Angular 19
+│── angular.json                  # Configuração do projeto
+│── package.json                   # Dependências do projeto
+│── tsconfig.json                   # Configuração do TypeScript
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+🔧 Tecnologias Utilizadas
 
-```bash
-ng generate --help
-```
+Angular 19 (Standalone Components)
 
-## Building
+RxJS para manipulação de dados assíncronos
 
-To build the project run:
+Angular Router para navegação
 
-```bash
-ng build
-```
+SCSS para estilização
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+JSON como fonte de dados estática
