@@ -1,2 +1,0 @@
-export default `:root{--black: #000;--gray-10: #7d7d7d;--gray-5: #e5e5e5;--gray-0: #f3f3f3;--white: #fff}*{margin:0;padding:0;box-sizing:border-box}body{font-family:Libre Baskerville,serif;background-color:var(--white);color:var(--black)}
-`;
