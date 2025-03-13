@@ -1,19 +1,16 @@
-Este projeto é uma galeria de arte interativa desenvolvida com Angular 19. Ele exibe uma coleção de obras de arte com informações detalhadas sobre cada uma, permitindo a navegação entre elas e a visualização ampliada das imagens.
+# Galleria - Angular 19
 
-🚀 Funcionalidades
+Este projeto é uma galeria de arte interativa desenvolvida com **Angular 19**. Ele exibe uma coleção de obras de arte com informações detalhadas sobre cada uma, permitindo a navegação entre elas e a visualização ampliada das imagens.
 
-📌 Exibição de uma galeria de artes em layout responsivo.
+## 🚀 Funcionalidades
+- 📌 Exibição de uma **galeria de artes** em layout responsivo.
+- 🔍 **Página de detalhes** para cada obra.
+- 🔄 **Navegação entre obras** diretamente da página de detalhes.
+- 🖼️ **Modal para exibição ampliada** da imagem principal.
+- 📡 **Consumo de dados via JSON**, podendo ser facilmente integrado a uma API.
 
-🔍 Página de detalhes para cada obra.
-
-🔄 Navegação entre obras diretamente da página de detalhes.
-
-🖼️ Modal para exibição ampliada da imagem principal.
-
-📡 Consumo de dados via JSON, podendo ser facilmente integrado a uma API.
-
-🏗️ Estrutura do Projeto
-
+## 🏗️ Estrutura do Projeto
+```
 galleria/
 │── src/
 │   ├── app/
@@ -45,15 +42,12 @@ galleria/
 │── angular.json                  # Configuração do projeto
 │── package.json                   # Dependências do projeto
 │── tsconfig.json                   # Configuração do TypeScript
+```
 
-🔧 Tecnologias Utilizadas
+## 🔧 Tecnologias Utilizadas
+- **Angular 19** (Standalone Components)
+- **RxJS** para manipulação de dados assíncronos
+- **Angular Router** para navegação
+- **SCSS** para estilização
+- **JSON** como fonte de dados estática
 
-Angular 19 (Standalone Components)
-
-RxJS para manipulação de dados assíncronos
-
-Angular Router para navegação
-
-SCSS para estilização
-
-JSON como fonte de dados estática
