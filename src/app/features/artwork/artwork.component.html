@@ -1,16 +1,44 @@
-<div class="artwork-details" *ngIf="artwork">
-  <div class="image-section">
-    <img [src]="artwork.images.hero.large" (click)="openModal()" />
+<div class="artwork-page">
+  <header class="gallery-header">
+    <img src="assets/shared/logo.svg" alt="Galleria logo" class="logo" />
+    <a href="" class="slideshow-button">Stop slideshow</a>
+  </header>
+  <hr class="gallery-hr" />
+  <div class="artwork-details" *ngIf="artwork">
+    <div class="image-section">
+      <img
+        [src]="artwork.images.hero.large"
+        alt="{{ artwork.name }}"
+        (click)="openModal()"
+      />
+      <img
+        class="artist-image"
+        [src]="artwork.artist.image"
+        alt="{{ artwork.artist.name }}"
+      />
+    </div>
+
+    <div class="info-section">
+      <div class="year-background">{{ artwork.year }}</div>
+
+      <div class="text-content">
+        <h1 class="artwork-title">{{ artwork.name }}</h1>
+        <h2 class="artist-name">{{ artwork.artist.name }}</h2>
+        <p class="description">{{ artwork.description }}</p>
+        <a [href]="artwork.source" target="_blank" class="source-link"
+          >Go to source</a
+        >
+      </div>
+
+      <!-- Modal -->
+      <app-image-modal
+        #modal
+        [imageUrl]="artwork.images.hero.large"
+      ></app-image-modal>
+    </div>
   </div>
-  <div class="info-section">
-    <h1>{{ artwork.name }}</h1>
-    <h2>{{ artwork.artist.name }}</h2>
-    <p>{{ artwork.description }}</p>
-    <a [href]="artwork.source" target="_blank">Go to source</a>
+  <div class="navigation-buttons">
     <button (click)="previousArtwork()">←</button>
     <button (click)="nextArtwork()">→</button>
   </div>
-
-  <!-- Modal -->
-  <app-image-modal #modal [imageUrl]="artwork.images.hero.large"></app-image-modal>
 </div>

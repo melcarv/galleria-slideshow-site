@@ -1,56 +1,122 @@
+.artwork-page {
+  padding: 48px;
+}
+
+.gallery-hr {
+  border: none;
+  border-top: 1px solid var(--gray-5);
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.slideshow-button {
+  color: var(--gray-10);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.57px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    color: var(--black);
+  }
+}
+
 .artwork-details {
+  display: flex;
+  gap: 4rem;
+  margin-top: 48px;
+  align-items: flex-start;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .image-section {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    text-align: center;
-  
-    .image-section {
-      max-width: 600px;
+    align-items: flex-start;
+
+    img {
+      width: 75%;
+      height: auto;
       cursor: pointer;
-      
-      img {
-        width: 100%;
-        border-radius: 10px;
-        transition: transform 0.3s;
-  
+    }
+
+    .artist-image {
+      margin-top: 2rem;
+      width: 100px;
+      height: auto;
+      border-radius: 4px;
+    }
+  }
+
+  .info-section {
+    flex: 1;
+    position: relative;
+
+    .year-background {
+      font-size: 10rem;
+      font-weight: bold;
+      color: rgba(200, 200, 200, 0.12);
+      position: absolute;
+      top: -20px;
+      right: 0;
+      z-index: 0;
+      user-select: none;
+
+      @media (max-width: 1024px) {
+        font-size: 6rem;
+        top: -10px;
+      }
+    }
+
+    .text-content {
+      position: relative;
+      z-index: 1;
+
+      .artwork-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .artist-name {
+        font-size: 1.25rem;
+        color: #888;
+        margin-bottom: 2rem;
+      }
+
+      .description {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #444;
+        margin-bottom: 1.5rem;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: underline;
+        color: #000;
+
         &:hover {
-          transform: scale(1.03);
+          opacity: 0.7;
         }
       }
     }
-  
-    .info-section {
-      max-width: 800px;
-      margin-top: 20px;
-  
-      h1 {
-        font-size: 32px;
-        margin-bottom: 10px;
-      }
-  
-      h2 {
-        font-size: 24px;
-        color: darkgray;
-        margin-bottom: 20px;
-      }
-  
-      p {
-        font-size: 18px;
-        line-height: 1.6;
-      }
-  
-      a {
-        display: inline-block;
-        margin-top: 20px;
-        font-size: 16px;
-        color: blue;
-        text-decoration: underline;
-      }
-  
-      button {
-        margin: 10px;
-      }
-    }
   }
-  
+}
+
